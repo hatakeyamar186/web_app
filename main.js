@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("todo-input");
-    const addButton =document.getElementById("add-btn");
+    const addButton = document.getElementById("add-btn");
     const todoList = document.getElementById("todo-list");
 
+    // 追加ボタンの処理
     addButton.addEventListener("click", () => {
         const task = input.value.trim();
         if (task === "") {
@@ -10,19 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // 新しいリストアイテムを作成
         const li = document.createElement("li");
-        li.innerText = task;
 
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "削除";
-        deleteButton.style.marginLeft = "10px";
+        // タスクテキストを格納する要素
+        const taskSpan = document.createElement("span");
+        taskSpan.textContent = task;
 
-        deleteButton.addEventListener("click", () => {
+        // 削除ボタンを取得し、リストに追加
+        const taskDeleteButton = document.createElement("button");
+        taskDeleteButton.textContent = "削除";
+        taskDeleteButton.classList.add("delete-task-btn");  // クラスを追加
+        taskDeleteButton.style.marginLeft = "10px";
+
+        // 削除ボタンのクリックイベント
+        taskDeleteButton.addEventListener("click", () => {
             li.remove();
         });
         
-        li.appendChild(deleteButton);
-
+        // 要素をリストに追加
+        li.appendChild(taskSpan);
+        li.appendChild(taskDeleteButton);
         todoList.appendChild(li);
 
         input.value = "";
