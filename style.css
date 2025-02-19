@@ -1,23 +1,56 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 画面全体の高さを確保 */
+    margin: 0;
 }
 
 .container {
     max-width: 400px;
-    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 ul {
+    text-align: left;
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 li {
-    background: #f3f3f3;
-    margin: 5px;
-    padding: 10px;
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background: #e9ecef;
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c82333;
 }
