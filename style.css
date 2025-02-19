@@ -10,11 +10,12 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    width: 400px;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 ul {
@@ -34,23 +35,4 @@ li {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
-}
-
-li:hover {
-    background: #e9ecef;
-    transform: scale(1.02);
-}
-
-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #c82333;
 }
