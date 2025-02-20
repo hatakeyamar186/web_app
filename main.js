@@ -18,7 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const taskSpan = document.createElement("span");
         taskSpan.textContent = task;
 
-        // 削除ボタンを取得し、リストに追加
+        // 完了ボタンを作成
+        const completeButton = document.createElement("button");
+        completeButton.textContent = "完了";
+        completeButton.classList.add("complete-task-btn");
+        completeButton.style.marginLeft = "10px";
+
+        // 完了のクリックイベント
+        completeButton.addEventListener("click", () => {
+            taskSpan.classList.toggle("completed");  // 斜線を引く/戻す
+        })
+
+        // 削除ボタンを作成
         const taskDeleteButton = document.createElement("button");
         taskDeleteButton.textContent = "削除";
         taskDeleteButton.classList.add("delete-task-btn");  // クラスを追加
@@ -31,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // 要素をリストに追加
         li.appendChild(taskSpan);
+        li.appendChild(completeButton);
         li.appendChild(taskDeleteButton);
         todoList.appendChild(li);
 

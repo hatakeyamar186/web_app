@@ -37,6 +37,25 @@ li {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+/* 完了したタスクに斜線が引かれる */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* 完了ボタンのデザイン */
+.completed-task-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 削除ボタンのデザイン */
 .delete-task-btn {
     background: #dc3545;
     color: white;
@@ -45,6 +64,10 @@ li {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.completed-task-btn:hover {
+    background: #218838;
 }
 
 .delete-task-btn:hover {
